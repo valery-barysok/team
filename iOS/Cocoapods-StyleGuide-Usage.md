@@ -2,7 +2,11 @@
 
 Все версии pods не имеют версий в podfile. Механизм версионирования pods осуществляется через podfile.lock. Он не должен находиться в .gitignore проекта.
 
-Пример: pod 'Alamofire'
+Пример: 
+
+```swift
+pod 'Alamofire'
+```
 
 ## Общий вид podfile
 
@@ -27,18 +31,17 @@ end
 ## Команда для обновления pods
 
 Для начала необходимо создать alias для командной строки:
-<br>
+```
 alias pi='pod install --repo-update'
-<br>
-Теперь данную команду можно использовать просто введя 'pi' в командной строке
-<br>
-<br>
-Также есть еще один alias для verbose вывода
-<br>
+```
+Теперь данную команду можно использовать просто введя 'pi' в командной строке.
+
+Также есть еще один alias для verbose вывода:
+```
 alias piv='pod install --repo-update --verbose'
-<br>
-Теперь данную команду можно использовать просто введя 'piv' в командной строке
+```
+Теперь данную команду можно использовать просто введя 'piv' в командной строке.
 
 ## Для перманентного использования alias 
 
-Скопируйте скрипт из https://github.com/TouchInstinct/Styleguide/blob/master/ios/Examples/Alias-piv_pi.md и вставьте в терминал.
+Скопируйте [скрипт](https://github.com/TouchInstinct/team/blob/master/iOS/Examples/Alias-piv_pi.md) и вставьте в командную строку.
