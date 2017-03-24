@@ -1,4 +1,4 @@
 ### Процессы iOS команды
 
 #### Гайды
-- [Работа с Cocoapods](/processes/Cocoapods-StyleGuide-Usage.md)
+- [Работа с Cocoapods](/iOS/Cocoapods-StyleGuide-Usage.md)
