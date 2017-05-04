@@ -1,7 +1,7 @@
 ### Процессы iOS команды
 
-#### Гайды
-- [Работа с Cocoapods](/iOS/Cocoapods-StyleGuide-Usage.md)
+#### Styleguides
+- [Стайлгайды для swift/objective-C](/iOS/CodeStyles/README.md)
 
 #### Прочее
 - [Примеры кода, скриптов, настроек](/iOS/Examples/README.md)
