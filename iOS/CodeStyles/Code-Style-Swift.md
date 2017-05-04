@@ -936,14 +936,19 @@ file:
 
 ## DateFormatter
 
-Из-за проблем с производительностью при использовании DateFormatter необходимо придерживаться следующей схемы. Посмотреть, почему DateFormatter нужно избегать можно [здесь](https://www.raywenderlich.com/31166/25-ios-app-performance-tips-tricks#avoidformatters) и [здесь](https://blog.soff.es/how-to-drastically-improve-your-app-with-an-afternoon-and-instruments)
+Actually, there are some problems with efficiency while using DateFormatter. To exclude it you should use the following scheme. 
 
-- Создать класс `<MyProject>DateFormatter`
-- Добавить формат даты. Формат должен соответствовать `private static let myFormat = "yyyy"`. Example:
+To consider why DateFormatter should be avoided see [here](https://www.raywenderlich.com/31166/25-ios-app-performance-tips-tricks#avoidformatters) and [here](https://blog.soff.es/how-to-drastically-improve-your-app-with-an-afternoon-and-instruments)
+
+- Create class `<MyProject>DateFormatter`
+- Add date format. The format should be the following `private static let myFormat = "yyyy"`. Example:
+
 ```swift
     private static let apiDateTimeFormat = "YYYY-MM-dd'T'HH:mm:ss.SSS'Z'"
 ```
-- Добавить кастомный DateFormatter. Example:
+
+- Add custom DateFormatter. Example:
+
 ```swift
 private static let apiFormatter: DateFormatter = {
         let dateFormater = DateFormatter()
@@ -952,13 +957,17 @@ private static let apiFormatter: DateFormatter = {
         return dateFormater
   }()
 ```
-- Написать функцию, которая будет использовать данный DateFormatter. Example:
+
+- Write a function which will use our DateFormatter. Example:
+
 ```swift
 static func backendDate(fromStrDate strDate: String) -> Date? {
-        return apiFormatter.date(from: strDate)
+    return apiFormatter.date(from: strDate)
 }
 ```
-- Теперь всё готово к использованию в проекте. Example:
+
+- Everything done for usage now in your project. Example:
+
 ```swift
 <MyProject>DateFormatter.backendDate(fromStrDate: stringValue)
 ```
