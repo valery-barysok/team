@@ -18,6 +18,11 @@ project_group_path: PROJECTNAME/Controllers
 ### Dependencies settings section
 podfile_path: Podfile
 
+### Catalog
+catalogs:
+- 'https://github.com/TouchInstinct/generamba_templates'
+
 ### Templates
 templates:
-- {name: touchin, git: 'https://github.com/TouchInstinct/generamba_templates/'}
+- {name: touchin}
+- {name: touchin-tablecell}
