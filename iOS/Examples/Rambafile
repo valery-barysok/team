@@ -25,4 +25,6 @@ catalogs:
 ### Templates
 templates:
 - {name: touchin}
+- {name: touchin-stateful}
+- {name: touchin-pagination}
 - {name: touchin-tablecell}
