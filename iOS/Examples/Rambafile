@@ -1,5 +1,5 @@
 ### Headers settings
-company: Touch Instinct
+company: TouchInstinct
 
 ### Xcode project settings
 project_name: PROJECTNAME
@@ -10,10 +10,10 @@ xcodeproj_path: PROJECTNAME.xcodeproj
 project_target: PROJECTNAME
 
 # The file path for new modules
-project_file_path: PROJECTNAME/Controllers
+project_file_path: PROJECTNAME/Generated
 
 # The Xcode group path to new modules
-project_group_path: PROJECTNAME/Controllers
+project_group_path: PROJECTNAME/Generated
 
 ### Dependencies settings section
 podfile_path: Podfile
