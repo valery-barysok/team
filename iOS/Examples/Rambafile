@@ -12,10 +12,10 @@ project_targets:
 - PROJECTNAMEPlayground
 
 # The file path for new modules
-project_file_path: PROJECTNAME/Generated
+project_file_path: PROJECTNAME/Controllers
 
 # The Xcode group path to new modules
-project_group_path: PROJECTNAME/Generated
+project_group_path: PROJECTNAME/Controllers
 
 ### Dependencies settings section
 podfile_path: Podfile
