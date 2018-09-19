@@ -757,16 +757,16 @@ class TimeMachine {
 
 ## Control Flow
 
-Prefer the `for-in` style of `for` loop over the `while-condition-increment` style.
+Prefer the `forEach` style over `for` loop over the `while-condition-increment` style.
 
 **Preferred:**
 ```swift
-for _ in 0..<3 {
-  print("Hello three times")
+(0...2).forEach { _ in
+    print("Hello, world!")
 }
 
-for (index, person) in attendeeList.enumerated() {
-  print("\(person) is at position #\(index)")
+someArray.enumerated().forEach { index, value in
+    print("\(index + 1) \(value)")
 }
 
 for index in stride(from: 0, to: items.count, by: 2) {
