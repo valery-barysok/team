@@ -769,12 +769,12 @@ someArray.enumerated().forEach { index, value in
     print("\(index + 1) \(value)")
 }
 
-for index in stride(from: 0, to: items.count, by: 2) {
-  print(index)
+stride(from: 0, to: items.count, by: 2).forEach {
+    print($0)
 }
 
-for index in (0...3).reversed() {
-  print(index)
+(0...3).enumerated().reversed().forEach { index, _ in
+    print(index)
 }
 ```
 
