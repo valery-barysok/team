@@ -757,7 +757,7 @@ class TimeMachine {
 
 ## Control Flow
 
-Prefer the `forEach` style over `for` loop over the `while-condition-increment` style.
+Prefer the `forEach` style over `for` loop and over the `while-condition-increment` style.
 
 **Preferred:**
 ```swift
@@ -780,6 +780,10 @@ for index in (0...3).reversed() {
 
 **Not Preferred:**
 ```swift
+for _ in 0..<3 {
+   print("Hello three times")
+}
+
 var i = 0
 while i < 3 {
   print("Hello three times")
