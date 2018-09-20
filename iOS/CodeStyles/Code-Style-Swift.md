@@ -757,29 +757,33 @@ class TimeMachine {
 
 ## Control Flow
 
-Prefer the `for-in` style of `for` loop over the `while-condition-increment` style.
+Prefer the `forEach` style over `for` loop and over the `while-condition-increment` style.
 
 **Preferred:**
 ```swift
-for _ in 0..<3 {
-  print("Hello three times")
+(0...2).forEach { _ in
+    print("Hello, world!")
 }
 
-for (index, person) in attendeeList.enumerated() {
-  print("\(person) is at position #\(index)")
+someArray.enumerated().forEach { index, value in
+    print("\(index + 1) \(value)")
 }
 
-for index in stride(from: 0, to: items.count, by: 2) {
-  print(index)
+stride(from: 0, to: items.count, by: 2).forEach {
+    print($0)
 }
 
-for index in (0...3).reversed() {
-  print(index)
+(0...3).enumerated().reversed().forEach { index, _ in
+    print(index)
 }
 ```
 
 **Not Preferred:**
 ```swift
+for _ in 0..<3 {
+   print("Hello three times")
+}
+
 var i = 0
 while i < 3 {
   print("Hello three times")
