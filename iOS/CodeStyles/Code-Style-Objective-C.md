@@ -53,11 +53,11 @@ UIApplication.sharedApplication.delegate;
 Например:
 ```objective-c
 if (user.isHappy) {
-//Do something
+    // Do something
 } else if (developer.isHappy) {
-//Do anything
+    // Do anything
 } else {
-//Do something else
+    // Do something else
 }
 ```
 Должна быть одна пустая строка между методами для повышения читаемости. 
@@ -68,7 +68,7 @@ if (user.isHappy) {
 Например:
 ```objective-c
 - (void)foo {
-    //Do something
+    // Do something
 }
 ```
 
@@ -141,7 +141,7 @@ NSString * text.
 ```objective-c
 @interface NYTSection: NSObject
 
-@property (nonatomic) NSString *headline;
+@property (strong, nonatomic) NSString *headline;
 
 @end
 ```
@@ -225,7 +225,7 @@ defines используем только для написания макрос
 
 Например:
 ```objective-c
-static NSString * const NYTAboutViewControllerCompanyName = @"The New York Times Company";
+static NSString *const NYTAboutViewControllerCompanyName = @"The New York Times Company";
 
 static const CGFloat NYTImageThumbnailHeight = 50.f;
 ```
@@ -249,10 +249,10 @@ typedef NS_ENUM(NSInteger, NYTAdRequestState) {
 Пример:
 ```objective-c
 typedef NS_OPTIONS(NSUInteger, NYTAdCategory) {
-  NYTAdCategoryAutos      = 1 << 0,
-  NYTAdCategoryJobs       = 1 << 1,
-  NYTAdCategoryRealState  = 1 << 2,
-  NYTAdCategoryTechnology = 1 << 3
+    NYTAdCategoryAutos      = 1 << 0,
+    NYTAdCategoryJobs       = 1 << 1,
+    NYTAdCategoryRealState  = 1 << 2,
+    NYTAdCategoryTechnology = 1 << 3
 };
 ```
 
@@ -359,11 +359,11 @@ static SingletonClass sharedObject = nil;
  @param     password      no        string      password
  */
  
-- (void)registerWithUserName:(NSString*) userName
-                       email:(NSString*) email
-                 andPassword:(NSString*) password
-                     success:(successBlock) success
-                     failure:(errorBlock) failure;
+- (void)registerWithUserName:(NSString *)userName
+                       email:(NSString *)email
+                 andPassword:(NSString *)password
+                     success:(SuccessBlock)success
+                     failure:(ErrorBlock)failure;
  ```
  
  
